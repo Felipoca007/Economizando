@@ -1,0 +1,167 @@
+body{
+	background-color: black;
+	display: flex;
+	flex-direction:column;
+	height: 100vh;
+}
+section{
+	border-radius: 10px;
+}
+.topnav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin:20px 0px;
+	color: white;
+}
+.active{
+	position: absolute;
+}
+.active svg{
+	height: 70px;
+	width:70px;
+}
+.topnav .title{
+	flex: 100%;
+	text-align: center;
+	font-size:25px; 
+}
+.t-b{color: black;}
+.t-w{color: white;}
+.topmenu{
+	display:none;
+	position: fixed;
+	background-color: #000000a1;
+	height: 100%;
+	width: 100%;
+	transform: translate(0%, 47%);
+}
+.topmenu .title{
+	flex: 100%;
+	text-align: center;
+	font-size:60px;
+	margin:20px;
+	color: black;
+}
+.topmenu .menu{
+	display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: white;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.topmenu a{
+	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	font-size: 50px;
+	border-bottom:solid 1px black;
+    border-top:solid 1px black;
+}
+.topmenu a svg{
+	width: 70px;
+	height: 70px;
+}
+.gastos{
+	background-color: white;
+	display:flex;
+	flex-direction: column;
+}
+.gastos .title{
+	flex: 20%;
+	text-align: center;
+	font-size:50px;
+	margin: 25px 0px;
+}
+.gastos .val{
+	flex:90%;
+	font-size:100px;
+	text-align:center;
+	color: red;
+	margin: 100px 0px;
+}
+.add{
+	display: flex;
+	background-color: white;
+	margin: 30px 0px;
+	align-items: center;
+}
+.add a{
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	width: 100%;
+	color: black;
+	margin: 20px;
+}
+.add svg{
+	height:70px;
+	width: 70px;
+}
+.add span{
+	flex: 100%;
+	text-align: center;
+	font-size: 40px;
+}
+.table{
+	background-color: white;
+	height: 100%;
+	padding: 20px;
+}
+.table .title{
+	text-align: center;
+	font-size:25px;
+	margin-bottom: 30px;
+}
+.table table{
+	table-layout: auto;
+    width: -webkit-fill-available;
+    font-size: 40px;
+    overflow-y: scroll;
+}
+.table tr{
+	padding: 5px 0px;
+	border: solid 1px gray;
+}
+
+/*nova despesa,html*/
+.gastos .form{
+	display: flex;
+	flex-direction: column;	
+}
+.gastos .form input,select{
+	height: 100px;
+    background-color: #d2d2d2;
+    font-size: 25px;
+    margin: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    flex:1 1 auto;
+}
+.button{
+	display: flex;
+	padding: 30px;
+}
+.button a{
+	padding: 10px;
+    background-color: red;
+    flex: 1 1 auto;
+    margin: 10px;
+    font-size: 70px;
+    text-decoration:none; 
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+.button a:nth-child(1){
+	background-color:#ff5d55; 
+}
+.button a:nth-child(2){
+	background-color:#75a9f9; 
+}

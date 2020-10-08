@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Economizando</title>
+
+		<link rel="manifest" href="manifest.json">
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="Seu App de Economia">
+		<meta name="apple-mobile-web-app-title" content="Seu App de Economia">
+		<meta name="msapplication-starturl" content="/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="theme_color" content="#222831">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<link rel="icon" type="image/png" sizes="512x512" href="homescreen.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="homescreen.png">
+
+		<script>
+			// Registering our Service worker
+			if('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('sw.js', { scope: './' })
+			}
+		</script>
+	</head>
+
+	<body>
+		<section class="topnav">
+			<a href="#" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></a>
+			<div class="topmenu">
+				<div class="menu">
+					<div class="title">Menu</div>
+					<a href="#">
+						<span>Mês</span>
+						<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></span>
+					</a>
+					<a href="#">
+						<span>Ano</span>
+						<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></span>
+					</a>
+				</div>
+			</div>
+			<div class="title t-w">OUTUBRO/2020</div>
+		</section>
+		<section class="gastos">
+			<div class="title">Total de gastos</div>
+			<div class="val">R$ <span id="total"></span></div>
+		</section>
+		<section class="add">
+			<a href="nova_despesa.html">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+				<span>ADICIONAR DESPESA</span>
+			</a>
+		</section>
+		<section class="table">
+			<div class="title">DETALHES:</div>
+			<table>
+				<tbody id="lista"></tbody>
+			</table>
+		</section>
+	</body>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>calculateTotal()</script>
+  <script>mostrarDespesas()</script>
+</html>

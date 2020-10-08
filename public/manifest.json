@@ -1,0 +1,14 @@
+{
+  "name": "Economizando",
+  "short_name": "Seu app de economia",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "homescreen.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
